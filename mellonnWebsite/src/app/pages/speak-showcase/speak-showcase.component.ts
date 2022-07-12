@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-speak-showcase',
@@ -7,7 +7,7 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./speak-showcase.component.scss']
 })
 export class SpeakShowcaseComponent implements OnInit {
-  video1Start: number = 0;
+  video1Start: number = 10;
   frameLength: number = 25;
   pause1Frame: number = 70;
   pause1Length: number = 2000;
@@ -17,7 +17,8 @@ export class SpeakShowcaseComponent implements OnInit {
   video1End: number = 0;
 
   constructor(
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private renderer: Renderer2,
   ) { }
 
   ngOnInit(): void {
@@ -39,8 +40,9 @@ export class SpeakShowcaseComponent implements OnInit {
     img.src = this.currentFrame(1);
 
     window.addEventListener('scroll', () => {
+      this.onScroll();
       let frameIndex = this.getFrameIndex(this.video1Start, this.video1End, this.pause1Frame, this.pause1Length, this.frameCount);
-      console.log(`index: ${frameIndex}, scroll: ${window.scrollY}`);
+      //console.log(`index: ${frameIndex}, scroll: ${window.scrollY}`);
       requestAnimationFrame(() => this.updateImage(frameIndex, canvas, context, img));
     });
   }
@@ -82,6 +84,21 @@ export class SpeakShowcaseComponent implements OnInit {
     } else {
       img.src = this.currentFrame(index);
       context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  onScroll() {
+    const scrollY = window.scrollY;
+    const pause = (this.frameLength * this.pause1Frame) + this.video1Start;
+
+    //Up until pause
+    if (scrollY < pause) {
+      const pageTitle = document.getElementById('pageTitle')!;
+      
+      const offset = (window.innerWidth / 2 - pageTitle.offsetWidth / 2) - (scrollY / (pause - pageTitle.offsetWidth) * (window.innerWidth / 2));
+      console.log(offset);
+      this.renderer.setStyle(pageTitle, "transform", "none");
+      this.renderer.setStyle(pageTitle, "left", offset + "px");
     }
   }
 }
