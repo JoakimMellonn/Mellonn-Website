@@ -125,5 +125,7 @@
       }
     }
   },
-  "defaultProject": "mellonnWebsite"
+  "cli": {
+    "analytics": false
+  }
 }
