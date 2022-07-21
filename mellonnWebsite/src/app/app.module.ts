@@ -8,13 +8,15 @@ import { SpeakShowcaseComponent } from './pages/speak-showcase/speak-showcase.co
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     SpeakShowcaseComponent,
-    BlogPageComponent
+    BlogPageComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
