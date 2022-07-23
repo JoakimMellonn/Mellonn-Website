@@ -1,12 +1,12 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-speak-showcase',
   templateUrl: './speak-showcase.component.html',
   styleUrls: ['./speak-showcase.component.scss']
 })
-export class SpeakShowcaseComponent implements OnInit {
+export class SpeakShowcaseComponent implements OnInit, OnDestroy {
   //Global animation settings
   frameLength: number = 100;
   imageSize: number = 0.8; // 1 = 100%
@@ -58,6 +58,10 @@ export class SpeakShowcaseComponent implements OnInit {
       requestAnimationFrame(() => this.updateImage(computerFrameIndex, this.computerFrameCount, canvas, context, computerImg, 'computer'));
       requestAnimationFrame(() => this.updateImage(chatFrameIndex, this.chatFrameCount, canvas, context, chatImg, 'chat'));
     });
+  }
+
+  ngOnDestroy(): void {
+      window.removeAllListeners!('scroll');
   }
 
   currentChatFrame(index: number) {

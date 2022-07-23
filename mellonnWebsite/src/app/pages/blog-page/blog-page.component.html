@@ -1,1 +1,8 @@
-<markdown [src]="'/assets/markdown/21-01-2022.md'"></markdown>
+<div class="content">
+    <div class="postList">
+        <div class="post" *ngFor="let post of posts" routerLink="/blog/{{post.id}}">
+            <img src="{{post.pictureKey}}">
+            <h1>{{post.title}}</h1>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,8 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
+import { HelpPageComponent } from './pages/help-page/help-page.component';
+import { BlogViewerComponent } from './pages/blog-page/blog-viewer/blog-viewer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     SpeakShowcaseComponent,
     BlogPageComponent,
     MenuComponent,
+    HelpPageComponent,
+    BlogViewerComponent,
   ],
   imports: [
     BrowserModule,

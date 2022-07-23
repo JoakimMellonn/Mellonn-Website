@@ -2,6 +2,7 @@
     background-color: #fff;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 3;
 
@@ -16,8 +17,16 @@
     li a {
         display: block;
         padding: 20px 20px;
+        margin: 5px 5px;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .button {
+        margin: 2px;
+        background-color: black;
+        border-radius: 15px;
+        box-shadow: 0px 2px 1px #00000024;
     }
 
     li a:hover,
@@ -30,6 +39,7 @@
         float: left;
         font-size: 2em;
         padding: 10px 20px;
+        margin: 5px 0;
         text-decoration: none;
 
         img {
@@ -90,7 +100,7 @@
     }
 
     .menu-btn:checked ~ .menu {
-        max-height: 240px;
+        max-height: 300px;
     }
 
     .menu-btn:checked ~ .menu-icon .navicon {
@@ -127,5 +137,15 @@
     }
     .header .menu-icon {
         display: none;
+    }
+}
+
+@media (max-width: 300px) {
+    .header {
+        .logo {
+            img {
+                height: 20px;
+            }
+        }
     }
 }

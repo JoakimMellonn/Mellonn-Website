@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mellonnwebsite-dev-113909-authRole",
+      "UnauthRoleArn": "arn:aws:iam::750760407006:role/amplify-mellonnwebsite-dev-113909-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::750760407006:role/amplify-mellonnwebsite-dev-113909-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-mellonnwebsite-dev-113909-deployment",
+      "UnauthRoleName": "amplify-mellonnwebsite-dev-113909-unauthRole",
+      "StackName": "amplify-mellonnwebsite-dev-113909",
+      "StackId": "arn:aws:cloudformation:eu-central-1:750760407006:stack/amplify-mellonnwebsite-dev-113909/23b1cc00-09a2-11ed-b3f3-06cc35d3182e",
+      "AmplifyAppId": "di8vslqq01ldc"
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mellonnwebsite-prod-120022-authRole",
+      "UnauthRoleArn": "arn:aws:iam::750760407006:role/amplify-mellonnwebsite-prod-120022-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::750760407006:role/amplify-mellonnwebsite-prod-120022-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-mellonnwebsite-prod-120022-deployment",
+      "UnauthRoleName": "amplify-mellonnwebsite-prod-120022-unauthRole",
+      "StackName": "amplify-mellonnwebsite-prod-120022",
+      "StackId": "arn:aws:cloudformation:eu-central-1:750760407006:stack/amplify-mellonnwebsite-prod-120022/1a41b100-09a5-11ed-bdc3-0ad3a748ba48",
+      "AmplifyAppId": "di8vslqq01ldc"
+    },
+    "categories": {
+      "auth": {
+        "mellonnwebsite530cfc65": {}
+      }
+    }
+  }
+}
