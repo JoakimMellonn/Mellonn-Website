@@ -3,7 +3,7 @@
   "serviceConfiguration": {
     "apiName": "mellonnwebsite",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-7cb91692-b4ab-4adb-ae3a-b66f94cccfb2/amplify/backend/api/mellonnwebsite/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-2c504f44-f5cf-401b-89df-35153c31f06b/amplify/backend/api/mellonnwebsite/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",

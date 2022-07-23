@@ -1,7 +1,29 @@
-<div class="content">
+<div class="content" *ngIf="!isLoading">
+    <h1 class="title">Take a look at the latest post</h1>
+    <div class="top">
+        <div class="latestPost" routerLink="/blog/{{latestPost!.id}}">
+            <img src="{{latestPost!.pictureKey}}">
+            <div class="description">
+                <div class="category" *ngFor="let category of latestPost!.categories" (click)="chooseCategory(category!)">
+                    <p>{{category}}</p>
+                </div>
+                <h1>{{latestPost!.title}}</h1>
+            </div>
+        </div>
+        <div class="categories">
+            <h2>Categories</h2>
+            <div class="category" *ngFor="let category of categories | categoryString:chosenCategories" (click)="chooseCategory(category)">
+                <p>{{category}}</p>
+            </div>
+        </div>
+    </div>
+    <h2 style="margin: 35px 0 10px 15px">Here you can find all blog posts</h2>
     <div class="postList">
-        <div class="post" *ngFor="let post of posts" routerLink="/blog/{{post.id}}">
+        <div class="post" *ngFor="let post of posts | category:chosenCategories" routerLink="/blog/{{post.id}}">
             <img src="{{post.pictureKey}}">
+            <div class="category" *ngFor="let category of post.categories" (click)="chooseCategory(category!)">
+                <p>{{category}}</p>
+            </div>
             <h1>{{post.title}}</h1>
         </div>
     </div>

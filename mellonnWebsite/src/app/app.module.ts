@@ -11,6 +11,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { BlogViewerComponent } from './pages/blog-page/blog-viewer/blog-viewer.component';
+import { CategoryPipe } from './pages/blog-page/pipes/category.pipe';
+import { CategoryStringPipe } from './pages/blog-page/pipes/category-string.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { BlogViewerComponent } from './pages/blog-page/blog-viewer/blog-viewer.c
     MenuComponent,
     HelpPageComponent,
     BlogViewerComponent,
+    CategoryPipe,
+    CategoryStringPipe,
   ],
   imports: [
     BrowserModule,
