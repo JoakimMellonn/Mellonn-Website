@@ -3,24 +3,39 @@
 * {
     font-family: 'Arial', sans-serif;
     color: #505050;
-    user-select: none;
 }
 
 body {
     margin: 0;
 }
 
+h1 {
+    font-size: 2em;
+    margin: 40px 0 15px 0;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin: 40px 0 15px 0;
+}
+
 h3 {
-    font-size: 1.6em;
-    margin: 15px 0;
+    font-size: 1.4em;
+    margin: 20px 0 0 0;
 }
 
 h4 {
-    font-size: 1.4em;
-    margin: 15px 0;
+    font-size: 1.2em;
+    margin: 15px 0 0 0;
 }
 
 h5 {
-    font-size: 1.2em;
-    margin: 15px 0;
+    font-size: 1em;
+    margin: 15px 0 0 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 700px;
 }

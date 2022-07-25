@@ -3,15 +3,12 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
-
-    .title {
-        font-size: 1.8em;
-        margin: 50px 0 0 15px;
-    }
+    user-select: none;
+    margin-bottom: 100px;
 
     .top {
         display: flex;
-        margin: 15px 0 25px 0;
+        margin: 40px 0 25px 0;
         padding: 15px;
 
         .latestPost {
@@ -46,11 +43,19 @@
         }
     }
 
+    hr {
+        width: 90%;
+        margin-top: 40px;
+        color: #50505020;
+        border-radius: 1px;
+    }
+
     .postList {
         display: grid;
         gap: 5px;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
+        margin-bottom: 50px;
 
         .post {
             width: 100%;
@@ -66,6 +71,82 @@
             background-color: #7d7d7d0b;
         }
     }
+
+    .center {
+        display: flex;
+        justify-content: center;
+
+        .readMore {
+            display: inline;
+            background-color: #A5C644;
+            border-radius: 25px;
+            box-shadow: 0px 5px 5px #00000024;
+            text-align: center;
+            padding: 15px 100px;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .readMore:hover {
+            background-color: #9ACD3A;
+            box-shadow: 0px 2px 2px #00000024;
+        }
+    }
+
+    .loadingTop {
+        display: flex;
+        margin: 40px 0 25px 0;
+        padding: 15px;
+
+        .loadingLatest {
+            flex: 2;
+            border-radius: 15px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 25px #00000024;
+
+            .loadingImg {
+                border-radius: 15px 15px 0 0;
+                box-shadow: none;
+            }
+
+            .description {
+                padding: 0 25px 25px 25px;
+            }
+        }
+
+        .loadingCategories {
+            flex: 1;
+            padding: 15px;
+            border-radius: 15px;
+            box-sizing: border-box;
+            margin-left: 15px;
+            
+        }
+    }
+
+    .loadingContent {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin-bottom: 50px;
+
+        .loadingPost {
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            box-sizing: border-box;
+
+            
+        }
+    }
+}
+
+@keyframes loading {
+    to {
+        background-position-x: -20%;
+    }
 }
 
 img {
@@ -74,6 +155,23 @@ img {
     border-radius: 15px;
     margin-bottom: 15px;
     object-fit: cover;
+}
+
+.chosenCategory {
+    background-color: #A5C644;
+    border-radius: 15px;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 5px 5px 0 0;
+
+    transition: 0.2s;
+    cursor: pointer;
+
+    p {
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: normal;
+    }
 }
 
 .category {
@@ -93,6 +191,10 @@ img {
     }
 }
 
+.chosenCategory:hover {
+    background-color: #9ACD3A;
+}
+
 .category:hover {
     background-color: #00000024;
 }
@@ -100,4 +202,83 @@ img {
 h1 {
     font-size: 1.4em;
     margin: 15px 0 0 0;
+}
+
+@media (max-width: 900px) {
+    .content {
+        .postList {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        .top {
+            flex-direction: column;
+        }
+
+        .postList {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+//Loading content
+
+.loadingImg {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+    background-color: #ededed;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, .5) 50%,
+        rgba(255, 255, 255, 0) 60%
+    ) #ededed;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: loading 1.5s infinite;
+}
+
+.loadingCategory {
+    border-radius: 15px;
+    padding: 6px 12px;
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    width: 40px;
+    height: 15px;
+
+    background-color: #ededed;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, .5) 50%,
+        rgba(255, 255, 255, 0) 60%
+    ) #ededed;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: loading 1.5s infinite;
+}
+
+.loadingTitle {
+    border-radius: 15px;
+    margin-top: 15px;
+    height: 26px;
+
+    background-color: #ededed;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, .5) 50%,
+        rgba(255, 255, 255, 0) 60%
+    ) #ededed;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: loading 1.5s infinite;
+    animation-delay: 0.1s;
 }

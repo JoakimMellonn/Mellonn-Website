@@ -10,37 +10,55 @@ import { Post } from 'src/models';
 export class BlogPageComponent implements OnInit {
   latestPost: Post | undefined;
   posts: Post[] = [];
+  currentPage: number = 0;
+  pageSize: number = 12;
   categories: string[] = [];
 
   chosenCategories: string[] = [];
-  categoryChosen: boolean = false;
 
   subscription: any;
   isLoading: boolean = true;
+  isReadMoreLoading: boolean = false;
 
   constructor() { }
 
   async ngOnInit() {
-    this.posts = await this.getPosts();
+    this.posts = await this.getPosts(this.currentPage);
     this.latestPost = this.posts[0];
     this.subscription = DataStore.observe(Post).subscribe(async post => {
-      this.posts = await this.getPosts();
+      this.posts = await this.getPosts(this.currentPage);
+      this.categories = this.getCategories();
       this.latestPost = this.posts[0];
     });
     this.categories = this.getCategories();
     this.isLoading = false;
   }
 
-  async getPosts(): Promise<Post[]> {
+  async getPosts(page: number): Promise<Post[]> {
     try {
-      const posts = await DataStore.query(Post, Predicates.ALL, {
-        sort: (s) => s.createdAt(SortDirection.DESCENDING),
-      });
+      let posts: Post[] = [];
+      for (let i = 0; i <= page; i++) {
+        const query = await DataStore.query(Post, Predicates.ALL, {
+          sort: (s) => s.createdAt(SortDirection.DESCENDING),
+          limit: this.pageSize,
+          page: i,
+        });
+        for (let post of query) {
+          posts.push(post);
+        }
+      }
       return posts;
     } catch (err) {
       console.log('error getting recordings', err);
       return [];
     }
+  }
+
+  async readMore() {
+    this.isReadMoreLoading = true;
+    this.currentPage++;
+    this.posts = await this.getPosts(this.currentPage);
+    this.isReadMoreLoading = false;
   }
 
   getCategories() {
@@ -62,10 +80,7 @@ export class BlogPageComponent implements OnInit {
     } else {
       this.chosenCategories.push(category);
     }
-
-    this.categoryChosen = this.chosenCategories.length != 0;
-    console.log(`Chosen categories: ${this.chosenCategories}`);
-    console.log(`Categories chosen: ${this.categoryChosen}`);
+    this.chosenCategories.sort();
   }
 
 }

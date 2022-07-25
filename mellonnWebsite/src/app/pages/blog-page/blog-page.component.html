@@ -1,6 +1,5 @@
-<div class="content" *ngIf="!isLoading">
-    <h1 class="title">Take a look at the latest post</h1>
-    <div class="top">
+<div class="content">
+    <div class="top" *ngIf="!isLoading">
         <div class="latestPost" routerLink="/blog/{{latestPost!.id}}">
             <img src="{{latestPost!.pictureKey}}">
             <div class="description">
@@ -12,19 +11,62 @@
         </div>
         <div class="categories">
             <h2>Categories</h2>
-            <div class="category" *ngFor="let category of categories | categoryString:chosenCategories" (click)="chooseCategory(category)">
+            <div class="chosenCategory" *ngFor="let category of chosenCategories.sort()" (click)="chooseCategory(category)">
+                <p>{{category}}</p>
+            </div>
+            <div class="category" *ngFor="let category of categories.sort() | categoryString:chosenCategories" (click)="chooseCategory(category)">
                 <p>{{category}}</p>
             </div>
         </div>
     </div>
-    <h2 style="margin: 35px 0 10px 15px">Here you can find all blog posts</h2>
-    <div class="postList">
+    <hr *ngIf="!isLoading">
+    <div class="postList" *ngIf="!isLoading">
         <div class="post" *ngFor="let post of posts | category:chosenCategories" routerLink="/blog/{{post.id}}">
             <img src="{{post.pictureKey}}">
-            <div class="category" *ngFor="let category of post.categories" (click)="chooseCategory(category!)">
+            <div class="chosenCategory" *ngFor="let category of chosenCategories.sort()" (click)="chooseCategory(category)">
+                <p>{{category}}</p>
+            </div>
+            <div class="category" *ngFor="let category of post.categories! | categoryString:chosenCategories" (click)="chooseCategory(category!)">
                 <p>{{category}}</p>
             </div>
             <h1>{{post.title}}</h1>
+        </div>
+    </div>
+    <div class="center" *ngIf="!isLoading && !isReadMoreLoading && (posts.length == (currentPage + 1) * pageSize)">
+        <div class="readMore" (click)="readMore()">
+            Read more
+        </div>
+    </div>
+
+    <div class="loadingTop" *ngIf="isLoading">
+        <div class="loadingLatest">
+            <div class="loadingImg"></div>
+            <div class="description">
+                <div class="loadingCategory"></div>
+                <div class="loadingTitle"></div>
+            </div>
+        </div>
+        <div class="loadingCategories">
+            <h2>Categories</h2>
+            <div class="loadingCategory"></div>
+        </div>
+    </div>
+    <hr *ngIf="isLoading">
+    <div class="loadingContent" *ngIf="isLoading || isReadMoreLoading">
+        <div class="loadingPost">
+            <div class="loadingImg"></div>
+            <div class="loadingCategory"></div>
+            <div class="loadingTitle"></div>
+        </div>
+        <div class="loadingPost">
+            <div class="loadingImg"></div>
+            <div class="loadingCategory"></div>
+            <div class="loadingTitle"></div>
+        </div>
+        <div class="loadingPost">
+            <div class="loadingImg"></div>
+            <div class="loadingCategory"></div>
+            <div class="loadingTitle"></div>
         </div>
     </div>
 </div>

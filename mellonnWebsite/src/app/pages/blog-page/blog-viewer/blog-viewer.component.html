@@ -1,4 +1,8 @@
 <div class="content">
+    <div class="top">
+        <img src="{{post?.pictureKey}}">
+        <p>Published: {{post?.date | date:'MMMM d, y, H:mm:ss'}}</p>
+    </div>
     <div class="markdown">
         <markdown [data]="markdown"></markdown>
     </div>
