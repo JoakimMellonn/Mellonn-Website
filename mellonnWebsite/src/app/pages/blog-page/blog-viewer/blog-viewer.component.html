@@ -1,7 +1,8 @@
 <div class="content">
     <div class="top">
-        <img src="{{post?.pictureKey}}">
-        <p>Published: {{post?.date | date:'MMMM d, y, H:mm:ss'}}</p>
+        <img src="{{post?.pictureKey}}" alt="{{post?.title}}">
+        <p>{{post?.author}}</p>
+        <p class="date">Updated on {{post?.date | date:'MMMM d, y'}}</p>
     </div>
     <div class="markdown">
         <markdown [data]="markdown"></markdown>

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataStore } from '@aws-amplify/datastore';
+import { delay } from 'rxjs';
 import { Post } from 'src/models';
 
 @Component({
@@ -9,10 +10,11 @@ import { Post } from 'src/models';
   templateUrl: './blog-viewer.component.html',
   styleUrls: ['./blog-viewer.component.scss']
 })
-export class BlogViewerComponent implements OnInit {
+export class BlogViewerComponent implements OnInit, AfterViewInit {
   id: string = '';
   post: Post | undefined;
   markdown: string = '';
+  isLoading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,21 +24,49 @@ export class BlogViewerComponent implements OnInit {
 
   async ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id') ?? '';
-    this.markdown = await this.getPost();
-
-    
+    //console.log(`ID: ${this.id}`);
+    this.markdown = await this.getPost(this.id);
+    this.isLoading = false;
   }
 
-  async getPost(): Promise<string> {
-    try {
-      this.post = await DataStore.query(Post, this.id)!;
-
-      const response = await fetch(this.post?.markdownKey!);
-      return await response.text();
-    } catch (err) {
-      console.log('error getting recordings', err);
-      return 'error';
+  async ngAfterViewInit() {
+    while (!this.isLoading) {
+      if (this.markdown == 'error') {
+        console.log('trying again');
+        this.markdown = await this.getPost(this.id);
+        break;
+      }
+      console.log('no error');
+      break;
     }
+  }
+
+  async getPost(id: string): Promise<string> {
+    let isTrying = true;
+    let tries = 0;
+
+    while (isTrying) {
+      try {
+        this.post = await DataStore.query(Post, id)!;
+        //console.log(`Post title: ${this.post!.title}`);
+  
+        const response = await fetch(this.post?.markdownKey!);
+        if (!response.ok) throw 'notOkay';
+  
+        return await response.text();
+      } catch (err) {
+        if (err == 'notOkay') {
+          isTrying = true;
+          tries++;
+          if (tries == 10) return 'error';
+        } else {
+          console.log('error getting post', err);
+          return 'error';
+        }
+      }
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    return 'error';
   }
 
   setTags(post: Post) {

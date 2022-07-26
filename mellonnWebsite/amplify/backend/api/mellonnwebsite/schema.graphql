@@ -2,9 +2,10 @@ type Post @model @auth(rules: [{allow: public}]) {
   id: ID!
   date: AWSDateTime!
   title: String!
-  description: String
-  markdownKey: String
-  pictureKey: String
-  categories: [String]
+  description: String!
+  author: String!
+  markdownKey: String!
+  pictureKey: String!
+  categories: [String!]
 }
  

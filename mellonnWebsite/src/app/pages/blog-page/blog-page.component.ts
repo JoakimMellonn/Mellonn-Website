@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataStore, Predicates, SortDirection } from '@aws-amplify/datastore';
 import { Post } from 'src/models';
 
@@ -20,7 +21,9 @@ export class BlogPageComponent implements OnInit {
   isLoading: boolean = true;
   isReadMoreLoading: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   async ngOnInit() {
     this.posts = await this.getPosts(this.currentPage);
@@ -49,7 +52,7 @@ export class BlogPageComponent implements OnInit {
       }
       return posts;
     } catch (err) {
-      console.log('error getting recordings', err);
+      console.log('error getting posts', err);
       return [];
     }
   }

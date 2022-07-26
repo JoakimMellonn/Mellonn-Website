@@ -7,6 +7,22 @@
 
     .top {
         margin-top: 50px;
+
+        img {
+            border-radius: 15px;
+        }
+
+        p {
+            margin: 15px 0 0 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .date {
+            color: #505050c1;
+            font-weight: normal;
+            margin-top: 5px;
+        }
     }
 
     .markdown {

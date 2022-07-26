@@ -12,10 +12,11 @@ export declare class Post {
   readonly id: string;
   readonly date: string;
   readonly title: string;
-  readonly description?: string | null;
-  readonly markdownKey?: string | null;
-  readonly pictureKey?: string | null;
-  readonly categories?: (string | null)[] | null;
+  readonly description: string;
+  readonly author: string;
+  readonly markdownKey: string;
+  readonly pictureKey: string;
+  readonly categories?: string[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Post, PostMetaData>);

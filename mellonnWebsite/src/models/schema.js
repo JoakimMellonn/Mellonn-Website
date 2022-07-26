@@ -28,28 +28,35 @@ export const schema = {
                     "name": "description",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "author": {
+                    "name": "author",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
                     "attributes": []
                 },
                 "markdownKey": {
                     "name": "markdownKey",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
                 "pictureKey": {
                     "name": "pictureKey",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
                 "categories": {
                     "name": "categories",
                     "isArray": true,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": [],
                     "isArrayNullable": true
                 },
@@ -98,5 +105,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "3da236145833357ff3309a5623cc2a25"
+    "version": "6ff33e72e9de50185deee40b8fec1e7b"
 };

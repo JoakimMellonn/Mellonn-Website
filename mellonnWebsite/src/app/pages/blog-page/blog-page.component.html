@@ -1,6 +1,7 @@
 <div class="content">
+    <h1 class="title">Our latest post</h1>
     <div class="top" *ngIf="!isLoading">
-        <div class="latestPost" routerLink="/blog/{{latestPost!.id}}">
+        <a class="latestPost" href="/blog/{{latestPost!.id}}" target="_self">
             <img src="{{latestPost!.pictureKey}}">
             <div class="description">
                 <div class="category" *ngFor="let category of latestPost!.categories" (click)="chooseCategory(category!)">
@@ -8,7 +9,7 @@
                 </div>
                 <h1>{{latestPost!.title}}</h1>
             </div>
-        </div>
+        </a>
         <div class="categories">
             <h2>Categories</h2>
             <div class="chosenCategory" *ngFor="let category of chosenCategories.sort()" (click)="chooseCategory(category)">
@@ -20,8 +21,12 @@
         </div>
     </div>
     <hr *ngIf="!isLoading">
+    <div class="noPosts" *ngIf="!isLoading && (posts | category:chosenCategories).length == 0">
+        <h2>We couldn't find any posts...</h2>
+        <h3>You can try with some other search criteria, while we look in the basement.</h3>
+    </div>
     <div class="postList" *ngIf="!isLoading">
-        <div class="post" *ngFor="let post of posts | category:chosenCategories" routerLink="/blog/{{post.id}}">
+        <a class="post" *ngFor="let post of posts | category:chosenCategories" id="{{post.id}}" href="/blog/{{post.id}}" target="_self">
             <img src="{{post.pictureKey}}">
             <div class="chosenCategory" *ngFor="let category of chosenCategories.sort()" (click)="chooseCategory(category)">
                 <p>{{category}}</p>
@@ -30,9 +35,9 @@
                 <p>{{category}}</p>
             </div>
             <h1>{{post.title}}</h1>
-        </div>
+        </a>
     </div>
-    <div class="center" *ngIf="!isLoading && !isReadMoreLoading && (posts.length == (currentPage + 1) * pageSize)">
+    <div class="center" *ngIf="!isLoading && !isReadMoreLoading && ((posts | category:chosenCategories).length == (currentPage + 1) * pageSize)">
         <div class="readMore" (click)="readMore()">
             Read more
         </div>
