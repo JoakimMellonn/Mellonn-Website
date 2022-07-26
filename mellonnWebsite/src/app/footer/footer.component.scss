@@ -1,0 +1,38 @@
+.footer {
+    height: 300px;
+    background-color: #50505020;
+    user-select: none;
+
+    .content {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1000px;
+        padding-top: 30px;
+        display: flex;
+
+        .flex {
+            flex: 1;
+        }
+
+        .links {
+            p {
+                font-weight: bold;
+            }
+
+            a {
+                display: block;
+                margin-top: 10px;
+                color: #50505099;
+                cursor: pointer;
+
+                transition: 0.2s;
+            }
+
+            a:hover {
+                color: #50505079;
+            }
+        }
+    }
+}

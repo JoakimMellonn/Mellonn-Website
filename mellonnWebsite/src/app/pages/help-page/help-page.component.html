@@ -1,3 +1,37 @@
 <div class="content">
-    <h1>Help Page</h1>
+    <div class="left">
+        <h1>Mellonn Speak Help</h1>
+        <ul>
+            <li class="item" (click)="getData(welcomeFile, '')">
+                Welcome
+            </li>
+            <li *ngFor="let article of articles">
+                <div class="collapsible" *ngIf="article.type == 'group'">
+                    <input id="{{article.name}}" class="checkbox" type="checkbox">
+                    <label for="{{article.name}}" class="item">
+                        <svg  width="10" height="10" viewBox="-50 -50 300 300">
+                            <polygon class="triangle" stroke-linejoin="round" points="100,0 0,200 200,200"/>
+                        </svg>
+                        {{article.name}}
+                    </label>
+                    <div class="list">
+                        <ul>
+                            <li *ngFor="let article of article.articles" (click)="getData(article.fileName, article.prefix)">{{article.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item" *ngIf="article.type == 'article'" (click)="getData(article.fileName, article.prefix)">
+                    {{article.name}}
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="center">
+        <markdown [data]="data"></markdown>
+    </div>
+
+    <div class="right">
+        <h1>Table of contents</h1>
+    </div>
 </div>

@@ -13,6 +13,7 @@ import { HelpPageComponent } from './pages/help-page/help-page.component';
 import { BlogViewerComponent } from './pages/blog-page/blog-viewer/blog-viewer.component';
 import { CategoryPipe } from './pages/blog-page/pipes/category.pipe';
 import { CategoryStringPipe } from './pages/blog-page/pipes/category-string.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CategoryStringPipe } from './pages/blog-page/pipes/category-string.pipe
     BlogViewerComponent,
     CategoryPipe,
     CategoryStringPipe,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
