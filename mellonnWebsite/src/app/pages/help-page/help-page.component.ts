@@ -17,8 +17,9 @@ export class HelpPageComponent implements OnInit {
   constructor() { }
 
   async ngOnInit() {
-    await this.getArticlesFromURL(this.articlesURL);
-    await this.getData(this.welcomeFile, '');
+    window.location.href = 'https://docs.mellonn.com';
+    //await this.getArticlesFromURL(this.articlesURL);
+    //await this.getData(this.welcomeFile, '');
   }
 
   async getArticlesFromURL(url: string) {
@@ -40,6 +41,7 @@ export class HelpPageComponent implements OnInit {
       if (!response.ok) throw 'notOkay';
 
       this.data = await response.text();
+      console.log(this.data);
     } catch (err) {
       console.log(`Error: ${err}`);
     }

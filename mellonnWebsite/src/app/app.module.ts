@@ -14,6 +14,7 @@ import { BlogViewerComponent } from './pages/blog-page/blog-viewer/blog-viewer.c
 import { CategoryPipe } from './pages/blog-page/pipes/category.pipe';
 import { CategoryStringPipe } from './pages/blog-page/pipes/category-string.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { SpeakPageComponent } from './pages/speak-page/speak-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     CategoryPipe,
     CategoryStringPipe,
     FooterComponent,
+    SpeakPageComponent,
   ],
   imports: [
     BrowserModule,
