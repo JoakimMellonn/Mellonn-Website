@@ -41,20 +41,22 @@ $viewHeight: calc(100vh - 64px);
     
     .mac {
         width: 100%;
-        aspect-ratio: 16/9;
-        margin-bottom: 350px;
+        aspect-ratio: 17/9;
                 
         transition: 0.2s;
     
         img {
-            width: 100%;
+            width: 85%;
+            min-width: 1200px;
             position: absolute;
             z-index: 1;
+            left: 50%;
+            transform: translate(-50%);
         }
 
         .textBox {
             position: relative;
-            top: 60%;
+            top: 50%;
             left: calc(100% - 30% - 10%);
             transform: translateY(-50%);
             z-index: 10;
@@ -268,6 +270,11 @@ $viewHeight: calc(100vh - 64px);
                     font-size: 0.9em;
                 }
             }
+
+            img {
+                width: 100%;
+                min-width: 0;
+            }
         }
     }
 }
@@ -298,6 +305,8 @@ $viewHeight: calc(100vh - 64px);
                 width: 100%;
                 position: static;
                 z-index: 1;
+                left: 0;
+                transform: none;
             }
         }
 
@@ -417,6 +426,7 @@ $viewHeight: calc(100vh - 64px);
             }
 
             .webButton {
+                display: none;
                 p {
                     font-size: 1em;
                 }
