@@ -65,6 +65,7 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
         }
       }
       await new Promise(resolve => setTimeout(resolve, 100));
+      console.log('Trying again...');
     }
     return 'error';
   }
