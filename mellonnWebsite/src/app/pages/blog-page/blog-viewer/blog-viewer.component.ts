@@ -47,13 +47,10 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
 
     while (isTrying) {
       try {
-        console.log('Getting post');
         this.post = await DataStore.query(Post, id)!;
-        console.log(this.post?.markdownKey);
         if (this.post?.markdownKey == undefined) throw 'notOkay';
   
         const response = await fetch(this.post?.markdownKey!);
-        console.log(response);
         if (!response.ok) throw 'notOkay';
   
         return await response.text();
@@ -63,7 +60,7 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
           tries++;
           if (tries == 50) return 'error';
         } else {
-          console.log('error getting post', err);
+          console.error('error getting post', err);
           return 'error';
         }
       }
