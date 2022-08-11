@@ -58,7 +58,7 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
         if (err == 'notOkay') {
           isTrying = true;
           tries++;
-          if (tries == 10) return 'error';
+          if (tries == 50) return 'error';
         } else {
           console.log('error getting post', err);
           return 'error';
