@@ -49,6 +49,8 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
       try {
         console.log('Getting post');
         this.post = await DataStore.query(Post, id)!;
+        console.log(this.post?.markdownKey);
+        if (this.post?.markdownKey == 'https://www.mellonn.com/undefined') throw 'notOkay';
   
         const response = await fetch(this.post?.markdownKey!);
         console.log(response);
