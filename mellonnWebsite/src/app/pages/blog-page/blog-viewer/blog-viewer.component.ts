@@ -2,8 +2,12 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataStore } from '@aws-amplify/datastore';
-import { delay } from 'rxjs';
 import { Post } from 'src/models';
+
+import 'prismjs';
+import 'prismjs/components/prism-scss';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-dart';
 
 @Component({
   selector: 'app-blog-viewer',
@@ -32,7 +36,6 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
   async ngAfterViewInit() {
     while (!this.isLoading) {
       if (this.markdown == 'error') {
-        console.log('trying again');
         this.markdown = await this.getPost(this.id);
         break;
       }
@@ -73,7 +76,6 @@ export class BlogViewerComponent implements OnInit, AfterViewInit {
   setTags(post: Post) {
     this.meta.updateTag({ property: "og:title", content: post.title});
     this.meta.updateTag({ property: "og:description", content: post.description ?? ''});
-    this.meta.updateTag({ property: "og:url", content: this.router.url});
     this.meta.updateTag({ property: "og:image", content: post.pictureKey ?? 'https://mellonn-website.s3.eu-central-1.amazonaws.com/logos/Design_1whiteGrey.png'});
   }
 
