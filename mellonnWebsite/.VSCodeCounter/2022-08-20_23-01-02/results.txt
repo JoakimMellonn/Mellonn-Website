@@ -1,0 +1,150 @@
+Date : 2022-08-20 23:01:02
+Directory : /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite
+Total : 87 files,  48209 codes, 146 comments, 540 blanks, all 48895 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |         16 |     44,839 |          2 |          6 |     44,847 |
+| TypeScript         |         35 |      1,302 |         79 |        219 |      1,600 |
+| SCSS               |         10 |      1,061 |          6 |        231 |      1,298 |
+| HTML               |         10 |        336 |         40 |         24 |        400 |
+| GraphQL            |          4 |        176 |          3 |          4 |        183 |
+| XML                |          2 |        158 |          1 |          2 |        161 |
+| JavaScript         |          3 |        152 |          7 |          6 |        165 |
+| CSS                |          1 |        110 |          7 |         26 |        143 |
+| JSON with Comments |          1 |         33 |          1 |          1 |         35 |
+| Markdown           |          4 |         27 |          0 |         20 |         47 |
+| YAML               |          1 |         15 |          0 |          1 |         16 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                       |         87 |     48,209 |        146 |        540 |     48,895 |
+| amplify                                                                                                                                 |         15 |        387 |          0 |          8 |        395 |
+| amplify/.config                                                                                                                         |          1 |         17 |          0 |          0 |         17 |
+| amplify/backend                                                                                                                         |         10 |        264 |          0 |          2 |        266 |
+| amplify/backend/api                                                                                                                     |          6 |        109 |          0 |          2 |        111 |
+| amplify/backend/api/mellonnwebsite                                                                                                      |          6 |        109 |          0 |          2 |        111 |
+| amplify/backend/api/mellonnwebsite/resolvers                                                                                            |          1 |          2 |          0 |          0 |          2 |
+| amplify/backend/api/mellonnwebsite/stacks                                                                                               |          1 |         58 |          0 |          1 |         59 |
+| amplify/backend/auth                                                                                                                    |          1 |         72 |          0 |          0 |         72 |
+| amplify/backend/auth/mellonnwebsite530cfc65                                                                                             |          1 |         72 |          0 |          0 |         72 |
+| amplify/backend/types                                                                                                                   |          1 |         20 |          0 |          0 |         20 |
+| amplify/hooks                                                                                                                           |          1 |          4 |          0 |          4 |          8 |
+| src                                                                                                                                     |         63 |      5,712 |        137 |        509 |      6,358 |
+| src/app                                                                                                                                 |         44 |      2,545 |         59 |        433 |      3,037 |
+| src/app/footer                                                                                                                          |          4 |        141 |          0 |         38 |        179 |
+| src/app/home-page                                                                                                                       |          4 |         32 |          0 |         12 |         44 |
+| src/app/menu                                                                                                                            |          4 |        199 |          3 |         44 |        246 |
+| src/app/pages                                                                                                                           |         25 |      1,528 |         53 |        297 |      1,878 |
+| src/app/pages/blog-page                                                                                                                 |         12 |        615 |          2 |        116 |        733 |
+| src/app/pages/blog-page/blog-viewer                                                                                                     |          4 |        131 |          1 |         26 |        158 |
+| src/app/pages/blog-page/pipes                                                                                                           |          4 |         53 |          0 |         18 |         71 |
+| src/app/pages/help-page                                                                                                                 |          5 |        161 |         39 |         38 |        238 |
+| src/app/pages/speak-page                                                                                                                |          4 |        558 |          1 |         99 |        658 |
+| src/app/pages/speak-showcase                                                                                                            |          4 |        194 |         11 |         44 |        249 |
+| src/assets                                                                                                                              |          3 |        268 |          8 |         28 |        304 |
+| src/assets/css                                                                                                                          |          1 |        110 |          7 |         26 |        143 |
+| src/assets/svg                                                                                                                          |          2 |        158 |          1 |          2 |        161 |
+| src/environments                                                                                                                        |          2 |          6 |         11 |          4 |         21 |
+| src/graphql                                                                                                                             |          4 |      2,650 |          3 |          3 |      2,656 |
+| src/models                                                                                                                              |          4 |        135 |          1 |         11 |        147 |
++-----------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                                | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/.graphqlconfig.yml                                                | YAML               |         15 |          0 |          1 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/README.md                                                         | Markdown           |         14 |          0 |         14 |         28 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/.config/project-config.json                               | JSON               |         17 |          0 |          0 |         17 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/README.md                                                 | Markdown           |          7 |          0 |          2 |          9 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/cli-inputs.json                | JSON               |         23 |          0 |          0 |         23 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/parameters.json                | JSON               |          6 |          0 |          0 |          6 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/resolvers/README.md            | Markdown           |          2 |          0 |          0 |          2 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/schema.graphql                 | GraphQL            |         10 |          0 |          1 |         11 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/stacks/CustomResources.json    | JSON               |         58 |          0 |          1 |         59 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/api/mellonnwebsite/transform.conf.json            | JSON               |         10 |          0 |          0 |         10 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/auth/mellonnwebsite530cfc65/cli-inputs.json       | JSON               |         72 |          0 |          0 |         72 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/backend-config.json                               | JSON               |         53 |          0 |          0 |         53 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/tags.json                                         | JSON               |         10 |          0 |          0 |         10 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/backend/types/amplify-dependent-resources-ref.d.ts        | TypeScript         |         20 |          0 |          0 |         20 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/cli.json                                                  | JSON               |         62 |          0 |          0 |         62 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/hooks/README.md                                           | Markdown           |          4 |          0 |          4 |          8 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/amplify/team-provider-info.json                                   | JSON               |         33 |          0 |          0 |         33 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/angular.json                                                      | JSON               |        141 |          0 |          1 |        142 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/karma.conf.js                                                     | JavaScript         |         37 |          6 |          2 |         45 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/package-lock.json                                                 | JSON               |     41,794 |          0 |          1 |     41,795 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/package.json                                                      | JSON               |         45 |          0 |          1 |         46 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/API.service.ts                                            | TypeScript         |        542 |          3 |         26 |        571 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app-routing.module.ts                                     | TypeScript         |         19 |          0 |          3 |         22 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app.component.html                                        | HTML               |          4 |          0 |          2 |          6 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app.component.scss                                        | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app.component.spec.ts                                     | TypeScript         |         31 |          0 |          5 |         36 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app.component.ts                                          | TypeScript         |          9 |          0 |          2 |         11 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/app.module.ts                                             | TypeScript         |         40 |          0 |          3 |         43 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/footer/footer.component.html                              | HTML               |         29 |          0 |          6 |         35 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/footer/footer.component.scss                              | SCSS               |         83 |          0 |         21 |        104 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/footer/footer.component.spec.ts                           | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/footer/footer.component.ts                                | TypeScript         |         11 |          0 |          5 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/home-page/home-page.component.html                        | HTML               |          1 |          0 |          0 |          1 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/home-page/home-page.component.scss                        | SCSS               |          0 |          0 |          1 |          1 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/home-page/home-page.component.spec.ts                     | TypeScript         |         20 |          0 |          6 |         26 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/home-page/home-page.component.ts                          | TypeScript         |         11 |          0 |          5 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/menu/menu.component.html                                  | HTML               |         13 |          0 |          0 |         13 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/menu/menu.component.scss                                  | SCSS               |        157 |          3 |         33 |        193 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/menu/menu.component.spec.ts                               | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/menu/menu.component.ts                                    | TypeScript         |         11 |          0 |          5 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-page.component.html                  | HTML               |         76 |          0 |          1 |         77 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-page.component.scss                  | SCSS               |        257 |          1 |         53 |        311 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-page.component.spec.ts               | TypeScript         |         20 |          0 |          6 |         26 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-page.component.ts                    | TypeScript         |         78 |          0 |         12 |         90 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-viewer/blog-viewer.component.html    | HTML               |         12 |          0 |          2 |         14 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-viewer/blog-viewer.component.scss    | SCSS               |         31 |          0 |          6 |         37 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-viewer/blog-viewer.component.spec.ts | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/blog-viewer/blog-viewer.component.ts      | TypeScript         |         70 |          1 |         12 |         83 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/pipes/category-string.pipe.spec.ts        | TypeScript         |          7 |          0 |          2 |          9 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/pipes/category-string.pipe.ts             | TypeScript         |         14 |          0 |          6 |         20 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/pipes/category.pipe.spec.ts               | TypeScript         |          7 |          0 |          2 |          9 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/blog-page/pipes/category.pipe.ts                    | TypeScript         |         25 |          0 |          8 |         33 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/help-page/articles.d.ts                             | TypeScript         |         10 |          0 |          1 |         11 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/help-page/help-page.component.html                  | HTML               |          0 |         37 |          2 |         39 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/help-page/help-page.component.scss                  | SCSS               |         94 |          0 |         20 |        114 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/help-page/help-page.component.spec.ts               | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/help-page/help-page.component.ts                    | TypeScript         |         39 |          2 |          9 |         50 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-page/speak-page.component.html                | HTML               |        166 |          0 |          6 |        172 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-page/speak-page.component.scss                | SCSS               |        363 |          1 |         82 |        446 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-page/speak-page.component.spec.ts             | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-page/speak-page.component.ts                  | TypeScript         |         11 |          0 |          5 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-showcase/speak-showcase.component.html        | HTML               |         10 |          0 |          1 |         11 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-showcase/speak-showcase.component.scss        | SCSS               |         30 |          0 |          4 |         34 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-showcase/speak-showcase.component.spec.ts     | TypeScript         |         20 |          0 |          6 |         26 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/app/pages/speak-showcase/speak-showcase.component.ts          | TypeScript         |        134 |         11 |         33 |        178 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/assets/css/atomDarkTheme.css                                  | CSS                |        110 |          7 |         26 |        143 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/assets/svg/app_store.svg                                      | XML                |         46 |          0 |          1 |         47 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/assets/svg/google_play.svg                                    | XML                |        112 |          1 |          1 |        114 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/aws-exports.d.ts                                              | TypeScript         |          2 |          0 |          0 |          2 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/environments/environment.prod.ts                              | TypeScript         |          3 |          0 |          1 |          4 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/environments/environment.ts                                   | TypeScript         |          3 |         11 |          3 |         17 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/graphql/mutations.graphql                                     | GraphQL            |         54 |          1 |          1 |         56 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/graphql/queries.graphql                                       | GraphQL            |         67 |          1 |          1 |         69 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/graphql/schema.json                                           | JSON               |      2,484 |          0 |          0 |      2,484 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/graphql/subscriptions.graphql                                 | GraphQL            |         45 |          1 |          1 |         47 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/index.html                                                    | HTML               |         25 |          3 |          4 |         32 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/main.ts                                                       | TypeScript         |         12 |          0 |          5 |         17 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/models/index.d.ts                                             | TypeScript         |         18 |          0 |          6 |         24 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/models/index.js                                               | JavaScript         |          6 |          1 |          4 |         11 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/models/schema.d.ts                                            | TypeScript         |          2 |          0 |          1 |          3 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/models/schema.js                                              | JavaScript         |        109 |          0 |          0 |        109 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/polyfills.ts                                                  | TypeScript         |          5 |         47 |          6 |         58 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/styles.scss                                                   | SCSS               |         46 |          1 |         10 |         57 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/src/test.ts                                                       | TypeScript         |         18 |          4 |          5 |         27 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/tsconfig.app.json                                                 | JSON               |         14 |          1 |          1 |         16 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/tsconfig.json                                                     | JSON with Comments |         33 |          1 |          1 |         35 |
+| /Users/joakimrosenfeldtpedersen/Github/Mellonn-Website/mellonnWebsite/tsconfig.spec.json                                                | JSON               |         17 |          1 |          1 |         19 |
+| Total                                                                                                                                   |                    |     48,209 |        146 |        540 |     48,895 |
++-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
